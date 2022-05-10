@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{juego.nombre}}{% endblock %}
+{% block contenido %}
+    <div id="main">
+        <div class="inner">
+            <header>
+                <h3 class="h2_style">{{juego.nombre}}</h3>
+                <ul class="ul_style">
+                    <li><strong>Nombre del Juego:</strong> {{juego.nombre}}</li>
+                    <li><strong>Sistema:</strong> {{juego.sistema}}</li>
+                    <li><strong>Distribuidor:</strong> {{juego.distribuidor}}</li>
+                    <li><strong>Desarrollador:</strong> {{juego.desarrollador}}</li>
+                    <li><strong>Categoria:</strong> {{juego.categoria}}</li>
+                    <li><strong>Año :</strong> {{juego.año}}</li>
+                </ul>
+                <br>
+                <h4><a href="/juegos">Volver a la pagina de juegos</a></h4>
+            </header>
+        </div>
+    </div>
+{% endblock %}
+
