@@ -1,7 +1,7 @@
 # Proyecto-MSX
 Proyecto MSX (Lenguaje de Marcas) 
 
-https://msx-aroldan.herokuapp.com/juegos
+https://msx-aroldan.herokuapp.com/
 ## Enunciado de la tarea
 
 Queremos hacer una aplicación web que nos ayude a controlar nuestra colección de juegos de nuestro ordenador preferido: el MSX.
