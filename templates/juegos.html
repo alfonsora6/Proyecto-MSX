@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Juegos{% endblock %}
+{% block contenido %}
+<section class="row tm-section-mb tm-section-2">
+  <div class="col-md-12 tm-section-2-inner">
+    
+    <div class="tm-section-2-left">
+          <div class="tm-img-container tm-img-container-1"></div>
+          <div class="tm-img-container tm-img-container-2"></div>
+    </div>
+    
+    <div class="tm-section-2-right tm-bg-primary">
+      <div class="tm-section-2-text">
+        <h2 class="tm-section-2-header tm-mb-45">Búsqueda de juegos</h2>
+        <p>En esta página podrás buscar el juego que quieras por categoría.</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      
+      <form action="/juegos" method="POST" class="tm-contact-form">
+        <h3 class="h3_style">Introduce el nombre del juego:</h3>
+        <div class="mb-4">
+          <input type="text" name="nombre" class="form-control" placeholder="Nombre Juego" value="{{nombre_juego}}" />
+        </div>
+        <select name="categorias" class="select_style">          
+          {% for categoria in lista_categoria -%}
+              {% if categoria == categorias -%}
+                  <option value="{{categoria}}" selected="selected">{{categoria}}</option>
+              {% else -%}  
+              <option value="{{categoria}}">{{categoria}}</option>
+              {% endif -%}
+          {% endfor -%}
+        </select>
+        <div class="mb-0">
+          <button type="submit" value="Buscar" class="btn btn-primary tm-btn-round tm-fl-right">Buscar</button>
+        </div>
+      </form>
+      
+      {% if lista_nombres -%}
+          <h2 class=" h2_style tm-section-2-header tm-mb-45">Búsqueda de juegos</h2>
+      <table>
+        <h4 class="h4_style"><strong>Resultados de la busqueda</strong></h4>
+        <tr class="tr_style">
+            <th>Nombre</th>
+            <th>Desarrollador</th>
+            <th>Detalles</th>
+        </tr>
+        <tr>
+            <th>
+                {% for juegos in lista_nombres -%}
+                <p class="p_style">{{juegos}}</p>
+                {% endfor -%}
+            </th>
+            <th>
+                {% for desarrollador in lista_desarrolladores -%}
+                <p class="p_style">{{desarrollador}}</p>
+                {% endfor -%}
+            </th>
+            <th>
+                {% for id in lista_ids -%}
+                <a href="/juego/{{id}}">
+                  <p class="p2_style">Detalles</p>
+                </a>
+                {% endfor -%}
+                {% endif -%}
+            </th>
+        </tr>
+    </table>
+    </div>
+  </div>
+</section>
+{% endblock %}
