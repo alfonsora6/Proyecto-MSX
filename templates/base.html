@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+  {% block title %}{% endblock %}
+  </title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">                                      
+  <link rel="stylesheet" href="../static/css/fontawesome-all.min.css">                               
+  <link rel="stylesheet" href="../static/slick/slick.css">
+  <link rel="stylesheet" href="../static/slick/slick-theme.css">
+  <link rel="stylesheet" href="../static/css/templatemo-style.css">                                     
+</head>
+
+<body>
+  <div class="container">
+    <div class="tm-top-bar"></div>
+    {% block contenido%}{% endblock %}
+    <div class="tm-bar-2"></div>
+
+  <footer class="pt-4 pb-4">
+    <p class="text-center tm-text-light-dark">
+      Proyecto MSX - Lenguaje de Marcas | 1º ASIR |  <a rel="github" href="https://github.com/alfonsora6" class="tm-text-light-dark"><strong>Alfonso Roldán Amador</strong></a></p>
+  </footer>
+
+</div>
+</body>
+</html>
